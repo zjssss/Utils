@@ -1,0 +1,133 @@
+/* 重置各标签的默认样式 */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /*  自动换行 */
+  word-wrap: break-word;
+  /*  强制英文单词断行 */
+  word-break: break-all;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  /* 文字风格 Sans-serif 各笔画粗细相同，Serif 笔画粗细不同，monospace 等宽体，cursive草书，fantasy梦幻 */
+  font-family: "Microsoft YaHei", sans-serif, "Helvetica Neue", Helvetica, Arial, "黑体", "宋体", Arial;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  line-height: 1.5;
+  /* 优化text的渲染平滑度 */
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*  设置标签为块级分类 */
+article,
+aside,
+details,
+fieldset,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+  display: block
+}
+
+/* 去除input标签的默认样式 */
+button, input, textarea {
+  -webkit-appearance: none;
+  font-family: "Microsoft YaHei", sans-serif, "Helvetica Neue", Helvetica, Arial, "黑体", "宋体", Arial;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  line-height: 1em;
+  outline: none;
+  background-color: transparent;
+}
+
+/*  禁止多文本框手动拖动大小 */
+textarea {
+  resize: none;
+  -webkit-appearance: none;
+}
+
+/* 去掉按下的阴影盒子 */
+input,
+textarea,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/*  清除a标签下划线 */
+a,
+a:visited {
+  text-decoration: none
+}
+
+a:focus,
+a:active,
+a:hover {
+  outline: none;
+}
+
+/*  清除列表前面的点 */
+ol,
+li,
+ul {
+  list-style: none
+}
+
+/*  清除IE下图片的边框 */
+img {
+  display: block;
+  max-width: 100%;
+  border-style: none;
+  font-size: 0;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 这些节点部分属性没有继承父节点样式，所有继承一下，并取消outline，外轮廓的效果 */
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+select,
+button,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  color: inherit;
+  outline: none;
+}
+
+button,
+input[type='submit'],
+input[type='button'] {
+  /* 可点击小手 */
+  cursor: pointer;
+}
